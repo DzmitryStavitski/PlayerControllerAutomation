@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tests.CreatePlayerTests">
+    <test name="CreateUserPositiveTest-AgeLowerBound">
+        <parameter name="age" value="17"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-AgeUpperBound">
+        <parameter name="age" value="59"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-SupervisorEditor">
+        <parameter name="editor" value="supervisor"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-AdminEditor">
+        <parameter name="editor" value="admin"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-MinAllowedPassword">
+        <parameter name="password" value="test567"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-MaxAllowedPassword">
+        <parameter name="password" value="test56789012345"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-MaleGender">
+        <parameter name="gender" value="male"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserPositiveTest-FemaleGender">
+        <parameter name="gender" value="female"/>
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerCheckThatUserExistTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="CreateUserContractTest">
+        <classes>
+            <class name="tests.CreatePlayerTests">
+                <methods>
+                    <include name="createPlayerContractTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="CreateUserNegativeTest-AgeLowerBound">
+        <parameter name="age" value="16"/>
+        <parameter name="responseStatusCode" value="400"/>
+        <classes>
+            <class name="tests.CreatePlayerNegativeTests"/>
+        </classes>
+    </test>
+    <test name="CreateUserNegativeTest-AgeUpperBound">
+        <parameter name="age" value="60"/>
+        <parameter name="responseStatusCode" value="400"/>
+        <classes>
+            <class name="tests.CreatePlayerNegativeTests"/>
+        </classes>
+    </test>
+    <test name="CreateUserNegativeTest-IncorrectEditorRole">
+        <parameter name="editor" value="user"/>
+        <parameter name="responseStatusCode" value="403"/>
+        <classes>
+            <class name="tests.CreatePlayerNegativeTests"/>
+        </classes>
+    </test>
+    <test name="CreateUserNegativeTest-IncorrectUserRole">
+        <parameter name="role" value="supervisor"/>
+        <parameter name="responseStatusCode" value="400"/>
+        <classes>
+            <class name="tests.CreatePlayerNegativeTests"/>
+        </classes>
+    </test>
+</suite>

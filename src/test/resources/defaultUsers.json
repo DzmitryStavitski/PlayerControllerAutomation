@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "screenName": "testSupervisor",
+      "gender": "male",
+      "age": 28
+    },
+    {
+      "id": 2,
+      "screenName": "testAdmin",
+      "gender": "female",
+      "age": 28
+    }
+]

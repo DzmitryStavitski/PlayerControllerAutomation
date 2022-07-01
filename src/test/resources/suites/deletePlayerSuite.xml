@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tests.CreatePlayerTests" parallel="methods" thread-count="3">
+    <test name="DeleteUserPositiveTest">
+        <classes>
+            <class name="tests.DeletePlayerTests"/>
+        </classes>
+    </test>
+
+    <test name="DeleteUserNegativeTest-DeleteByNotExistingUser">
+        <classes>
+            <class name="tests.DeletePlayerNegativeTests"/>
+        </classes>
+    </test>
+</suite>

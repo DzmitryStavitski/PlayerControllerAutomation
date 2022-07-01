@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTestsSuite">
+    <!-- Common Parameters for Test User-->
+    <parameter name="age" value="35"/>
+    <parameter name="editor" value="supervisor"/>
+    <parameter name="gender" value="male"/>
+    <parameter name="login" value="login"/>
+    <parameter name="password" value="test567"/>
+    <parameter name="role" value="user"/>
+    <parameter name="screenName" value="TEST"/>
+    <parameter name="responseStatusCode" value="200"/>
+
+    <suite-files>
+        <suite-file path="createPlayerSuite.xml"/>
+        <suite-file path="deletePlayerSuite.xml"/>
+        <suite-file path="getAllPlayersSuite.xml"/>
+        <suite-file path="getPlayerByIdSuite.xml"/>
+        <suite-file path="updatePlayerSuite.xml"/>
+    </suite-files>
+</suite>
