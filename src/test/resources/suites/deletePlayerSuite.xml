@@ -8,6 +8,7 @@
     </test>
 
     <test name="DeleteUserNegativeTest-DeleteByNotExistingUser">
+        <parameter name="login" value="TestDeleteLogin"/>
         <classes>
             <class name="tests.DeletePlayerNegativeTests"/>
         </classes>

@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class TestDataUtil {
-    public static List<Player> readJsonFromResources() throws IOException {
+    public static List<Player> GetDefaultUsersFromResources() throws IOException {
         Reader reader = Files.newBufferedReader(Paths.get("src/test/resources/defaultUsers.json"));
         List<Player> players = new Gson().fromJson(reader, new TypeToken<List<Player>>(){}.getType());
         return players;

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="tests.CreatePlayerTests">
+<suite name="tests.CreatePlayerTests" parallel="tests" thread-count="3">
     <test name="CreateUserPositiveTest-AgeLowerBound">
+        <parameter name="login" value="login1"/>
         <parameter name="age" value="17"/>
         <classes>
             <class name="tests.CreatePlayerTests">
@@ -13,6 +14,7 @@
     </test>
     <test name="CreateUserPositiveTest-AgeUpperBound">
         <parameter name="age" value="59"/>
+        <parameter name="login" value="login2"/>
         <classes>
             <class name="tests.CreatePlayerTests">
                 <methods>
@@ -23,6 +25,7 @@
     </test>
     <test name="CreateUserPositiveTest-SupervisorEditor">
         <parameter name="editor" value="supervisor"/>
+        <parameter name="login" value="login3"/>
         <classes>
             <class name="tests.CreatePlayerTests">
                 <methods>
@@ -32,6 +35,7 @@
         </classes>
     </test>
     <test name="CreateUserPositiveTest-AdminEditor">
+        <parameter name="login" value="login4"/>
         <parameter name="editor" value="admin"/>
         <classes>
             <class name="tests.CreatePlayerTests">
@@ -42,6 +46,7 @@
         </classes>
     </test>
     <test name="CreateUserPositiveTest-MinAllowedPassword">
+        <parameter name="login" value="login5"/>
         <parameter name="password" value="test567"/>
         <classes>
             <class name="tests.CreatePlayerTests">
@@ -52,6 +57,7 @@
         </classes>
     </test>
     <test name="CreateUserPositiveTest-MaxAllowedPassword">
+        <parameter name="login" value="login6"/>
         <parameter name="password" value="test56789012345"/>
         <classes>
             <class name="tests.CreatePlayerTests">
@@ -62,6 +68,7 @@
         </classes>
     </test>
     <test name="CreateUserPositiveTest-MaleGender">
+        <parameter name="login" value="login7"/>
         <parameter name="gender" value="male"/>
         <classes>
             <class name="tests.CreatePlayerTests">
@@ -72,6 +79,7 @@
         </classes>
     </test>
     <test name="CreateUserPositiveTest-FemaleGender">
+        <parameter name="login" value="login8"/>
         <parameter name="gender" value="female"/>
         <classes>
             <class name="tests.CreatePlayerTests">

@@ -31,7 +31,6 @@ public class CreatePlayerNegativeTests extends BaseTest {
             context.setAttribute("CreatedUserID", response.as(Player.class).getId());
         }
 
-
         Assert.assertEquals(response.getStatusCode(), responseStatusCode,
                 "Expected status code is different.");
     }

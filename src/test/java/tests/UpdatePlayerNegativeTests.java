@@ -15,6 +15,7 @@ public class UpdatePlayerNegativeTests {
         Player testPlayer = Player.builder().build();
         Response response = ApiActions.updatePlayerByID(context.getAttribute("999999").toString(),
                 testPlayer, "admin");
-        Assert.assertNotEquals(response.getStatusCode(), "200");
+        Assert.assertNotEquals(response.getStatusCode(), "200",
+                "Expected code after delete player operation is different.");
     }
 }
